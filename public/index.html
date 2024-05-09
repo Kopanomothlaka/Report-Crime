@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Crime</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg py-3 sticky-top bg-body-tertiary">
+        <div class="container">
+
+            <a class="navbar-brand" href="#">
+                <img src="logo.png" class="logo" width="70" height="70"> 
+                <a class="navbar-brand" href="#home">Report Crime</a>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link " href="#home">Home</a>
+                    </li>
+            
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#message">Message</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#file_complaint">File Complaint</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Call</a>
+                    </li>
+
+                </ul>
+
+                
+                <a href="#" class="btn btn-primary">+27 15 293 7186</a>
+            </div>
+        </div>
+    </nav>
+
+    
+    
+
+
+    <div class="hero vh-100 d-flex align-items-center" id="home">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-md-7 mx-auto text-center">
+                    <img src="logo.png"  height="150px" width="150px" alt="">
+                    <h1 class="display-5 text-white ">Report Crime </h1>
+                    <a href="#message">
+                     <img href="#message" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAADwCAYAAAA+VemSAAAKlUlEQVR4Xu3dgY3jZBCG4UsHtEQF18LSAVcJ1wFXCi3QASVcB4cjZSGETWwntuefmQcJCels55/3+96dTfZWnD75BwEE0hI4pT25gyOAwCcCKwECiQkQOHF4jo4AgXUAgcQECJw4PEdHgMA6gEBiAgROHJ6jI0BgHUAgMQECJw7P0REgsA4gkJgAgROH5+gIEFgHEEhMgMCJw3N0BAisAwgkJkDgxOE5OgIE1gEEEhMgcOLwHB0BAusAAokJEDhxeI6OAIF1AIHEBAicODxHR4DAOoBAYgIEThyeoyNAYB1AIDEBAicOz9ERILAOIJCYAIETh+foCBBYBxBITIDAicNzdAQIrAMIJCZA4MThOToCBNYBBBITIHDi8BwdAQLrAAKJCRA4cXiOjgCBdQCBxAQInDg8R0eAwDqAQGICBE4cnqMjQGAdQCAxAQInDs/RESCwDiCQmACBE4fn6AgQWAcQSEyAwInDc3QECKwDCCQmQODE4Tk6AgTWAQQSEyBw4vAcHQEC6wACiQkQOHF4jo4AgXUAgcQECJw4PEdHgMA6gEBiAgROHJ6jI0BgHUAgMQECJw7P0REgsA4gkJgAgROH5+gIEFgHEEhMgMCJw3N0BAisAwgkJkDgleH9+PHj1+mWz6fT6eeVt7r8AYGJ6+/TH/85cf0K1HICBF7O6tNF3t8ut/xB4hXw5uV9u1zyhcTLuRJ4Iasbed/vIvFCfvcuu2zed3nfLyPxQq4EXgDqjrwkXsDu0SV35CXxCq4EnoE1Iy+JV5Tt+tIZeUm8kCuBH783O39g9f6edw6pb6fnCF3+fKG8JF7Ak8B3IC3cvLd3k3j+O5rzp82373nnquo98R1CBP4AzJPy+nZ6H3lt4gdcCXwD50V5SXz/O5pnNu/t02ziGyIEvgKykbwk/v8XxS3ktYk/+OJI4H8/WFnzgdXcezYSP/eB1VKuNvGFFIEnEBtvXh9s7SuvTXzVsPYC7yxv20288kdFSzev98TeA/9L4CB520l8kLw28USg9QY+uGjnwpX/OXEA02/TLz/88uwKz35fa4HP4QUUrqzEASy/TRGeP9D6nl3EZ8/fXmASP1ud/95H3m04rn0KgY/5xPSjXMpsYvKu1W676wl8xTKgiOklDmDW/tvma/0JfPPFMKCQaSUOYEVeP0aa//YloJjpJA5gRN4PqmsD3/E5oKBpJA5gQ947PSXwg4UcUNThJQ5gQt4HHSXwzHfUAYUdVuIAFuSd6SeB598S+8seEyPyLihKwCUEXgg9oMDDbOKA2W3ehb0k8EJQ58sCihwuccDM5F3RSQKvgNVNYvKuLEfA5QR+AnpAsQ/fxAEz2rxPdJHAT0CrvonJ+2QpAm4j8AvQA4q++yYOmMnmfaGDBH4BXrVNTN4XyxBwO4E3gB5Q/M03ccAMNu8G3SPwBhCzb2LyblSCgMcQeEPoASK8vIkDzmzzbtg5Am8IM9smJu/G4Qc8jsA7QA8QY/UmDjijzbtD1wi8A9TRNzF5dwo94LEE3hF6gCizmzjgTDbvjh0j8I5wR9vE5N057IDHE/gA6AHi/G8TB5zB5j2gWwQ+AHL0JibvQSEHvAyBD4QeINIf03h/Tf++HTimzXsgbAIfCDtoEx85IXmPpD29FoEPBl5YYvIGdInAAdALSkzeoB4ROAh8IYnJG9ghAgfCLyAxeYP7Q+DgABJLTN4BukPgAUJIKDF5B+kNgVcGMf0s99fpls+n0+nnlbfOXh7wc+LZM31wwS7yXmb/c+L69ZlDdb2HwCuSv8j72+WW2V8cWPHofy4dXOI95X27QPhC4uXNIfBCVjfyvt/VSeIj5H3nSuKFvSTwAlB35O0k8ZHyknhBJ98vIfAMrBl5O0gcIS+JF0pM4AegFspbWeJIeUm8QGIC34G0Ut6KEo8gL4lnJCbwB4CelLeSxCPJS+IHEhP4Bs6L8laQeER5SXxHYgJfgdlI3swSjywviT+QmMAXKBvLm1HiDPKS+EZiAk9AdpI3k8SZ5CXxlcTtBd5Z3gwSZ5SXxBcCrQU+SN6RJc4sL4knAt0F/n1i8PbgU/qt/2ikvztdQd5zPt+mX374ZeugsjyvtcDnkAJ++2cEicvIO0V4/sWH71mE2/qc7QVuKDF5t7Yo8HkEvsBvsonJGyjbHi9N4CuqxSUm7x4GBT+TwDcBFJWYvMGi7fXyBP6AbDGJzxNu/kFPAKNdvgjtJdZRzyXwHdIBBd3r0+mftv6UNoANee/0lMAPvlQGFHUXibfcBgFMyPsgQALPtDugsMNKHMCCvDP9JPCC9RRQ3OEkDmBA3gXdJPACSOdLAgo8jMQBs5N3YS8JvBBUV4nJu6IgAZcSeCX0gEKHbeKAWW3elX0k8EpgXTYxeZ8oRsAtBH4SekDBD9vEAbPZvE/2kMBPgqu6icn7QiECbiXwi9ADCr/bJg6YxeZ9sX8EfhFglU1M3g2KEPAIAm8EPUCAzTZxwNlt3o16R+CNQGbdxOTdsAABjyLwxtADhHh6Ewec1ebduG8E3hholk1M3h2CD3gkgXeCHiDI4k0ccDabd6eeEXgnsKNuYvLuGHjAowm8M/QAYe5u4oCz2Lw794vAOwMeZROT94CgA16CwAdBDxDon00c8No270G9IvBBoKM28fS6f03/vh04JnkPhE3gA2EHSXzkhOQ9kvb0WgQ+GHhhickb0CUCB0AvKDF5g3pE4CDwhSQmb2CHCBwIv4DE5A3uD4GDA0gsMXkH6A6BBwghocTkHaQ3BB4kiEQSk3egzhB4oDASSEzewfpC4MECGVhi8g7YFQIPGMqAEpN30J4QeNBgBpKYvAN3hMADhzOAxOQdvB8EHjygQInJm6AbBE4QUoDE5E3SCwInCepAicmbqBMEThTWARKTN1kfCJwssB0lJm/CLhA4YWg7SEzepD0gcNLgNpSYvIk7QODE4W0gMXmT50/g5AG+IDF5C2RP4AIhPiExeYvkTuAiQa6QmLyFMidwoTAXSEzeYnkTuFigDyQmb8GsCVww1A8kJm/RnAlcNNgric//+eV0On0vPGrb0QhcPPrp/0z4E3nrhkzgutmarAEBAjcI2Yh1CRC4brYma0CAwA1CNmJdAgSum63JGhAgcIOQjViXAIHrZmuyBgQI3CBkI9YlQOC62ZqsAQECNwjZiHUJELhutiZrQIDADUI2Yl0CBK6brckaECBwg5CNWJcAgetma7IGBAjcIGQj1iVA4LrZmqwBAQI3CNmIdQkQuG62JmtAgMANQjZiXQIErputyRoQIHCDkI1YlwCB62ZrsgYECNwgZCPWJUDgutmarAEBAjcI2Yh1CRC4brYma0CAwA1CNmJdAgSum63JGhAgcIOQjViXAIHrZmuyBgQI3CBkI9YlQOC62ZqsAQECNwjZiHUJELhutiZrQIDADUI2Yl0CBK6brckaECBwg5CNWJcAgetma7IGBAjcIGQj1iVA4LrZmqwBAQI3CNmIdQkQuG62JmtAgMANQjZiXQIErputyRoQIHCDkI1YlwCB62ZrsgYECNwgZCPWJUDgutmarAEBAjcI2Yh1CRC4brYma0CAwA1CNmJdAgSum63JGhAgcIOQjViXAIHrZmuyBgT+BuG84y1IcXnkAAAAAElFTkSuQmCC"/>            </div>
+
+                    </a>
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <section id="message" >
+        <div class="container">
+            <div class="row mb-5">
+
+                <div class="col-md-8 mx-auto text-center">
+                    <h6 class="text-primary">Message</h6>
+                    <h1>Get in Touch</h1>
+                    <p> We appreciate your commitment to maintaining a safe community. If you have witnessed or have information about a crime, your assistance is invaluable.
+                    </p>
+                </div>
+            </div>
+
+            <form action="https://formsubmit.co/8dfad814c39c133937826fc28072b7a2"  method="POST" class="row g-3 justify-content-center">
+                <div class="col-md-10">
+                    <input type="text" class="form-control" placeholder="Subject" required>
+                    <input type="hidden" name="_captcha" value="false">
+                </div>
+                
+            
+
+                <div class="col-md-10 ">
+                    <textarea name="message" type="text" id="" cols="30" rows="5" class="form-control"
+                        placeholder="Enter Message"></textarea>
+                      <input type="hidden" name="_next" value="https://report-crime-sa.web.app/sentmail.html">
+                </div>
+                <div class="col-md-10 d-grid">
+                    <button type="submit" class="btn btn-primary">SEND</button>
+                </div>
+
+
+            </form>
+
+        </div>
+
+    </section>
+    <section id="file_complaint" >
+        <div class="container">
+            <div class="row mb-5">
+
+                <div class="col-md-8 mx-auto text-center">
+                    <h6 class="text-primary">File Complaint</h6>
+                    <h1>Upload Files</h1>
+                    <p> Your insights and observations are instrumental in maintaining a secure and inclusive environment. The "File Complaint" section is designed to provide a straightforward avenue for you to report any concerns or incidents you may have witnessed.
+                    </p>
+                </div>
+            </div>
+
+            <form action="https://formsubmit.co/8dfad814c39c133937826fc28072b7a2"  method="POST" class="row g-3 justify-content-center">
+
+                <div class="col-md-10">
+                    <input type="file" name="attachment" accept="image/png, image/jpeg, application/pdf">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://report-crime-sa.web.app/uploaded.html">
+                </div>
+                
+            
+
+            
+                <div class="col-md-10 d-grid">
+                    <button type="submit" class="btn btn-primary">UPLOAD FILE</button>
+                </div>
+
+
+            </form>
+
+        </div>
+
+    </section>
+    <section id="services">
+        <div class="container">
+            <div class="row mb-4">
+
+                <div class="col-md-8 mx-auto text-center">
+                    <h6 class="text-primary">Call</h6>
+                    <h1>Find Us</h1>
+                    
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-6 col-md-4">
+                    <div class="service card-effect">
+                        <div class="iconbox">
+                            <i class='bx bx-music'></i>
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABt0lEQVRIS82VjVHCQBCFSQdagXSgdAAdSAdQgVKBUoHpwHQgHRgrECsQK5AO4vucvcxlcweRGWbcmZvkNrv73v7cpRidWYozxx+dBNA0zaeIbbU+tOqiKOoc0R6AnC9kfK91JcdlylE2jdNX2q9kv/f2HQAL/iyjWzOE3cw7yW4s3Y2tOz0hRfC5z8YDvETBQ9wkSPhopJ60XxjIRCC78N0DfBsbT7qU0yoKGnrwJn2JXkCBXIeQB8CR9FOyVDBqTbC4B1vpJ5bJu/lTqg22HuBVumkGYCOnuQFAgh5QGt5pcCmQR70/aK21570HgAMT5GUnxSyurQFBBlIhC4aDUrVkfAbBIQZg3kkZkI5YWejbXt8v/b6XgbHyfYB5nchqkCp10HyZ2noOiuiMcieZtGNhtilVK1YOGvoVRjVFIHkXyZlGk0kQ6k8ffkEsOM1lkpBsltnLTkFSI7tWsMrAw3USSCRP/CEA7peY5ZAW9ECOXtfKhMtvMSS62VTxLXwUwGrue3IIr3NvDQIwkLFlwuTkhCHg3LT/hcEAcUSVjZJd2xRN7VutJ5PW+emcBPCHfpz2T/5XAD/KV7YZNq/mYgAAAABJRU5ErkJggg=="/>   </div>
+
+                        <h5 class="mt-4 mb-2">Limpopo</h5>
+                        <P>072 149 9927
+                        </P>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4">
+                    <div class="service card-effect">
+                        <div class="iconbox">
+                            <i class='bx bx-music'></i>
+
+                            <img
+                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABH0lEQVRIS7WVARHCMAxFVwfDAThAAjjAAcwBUwAoYCgAB0gAB+AAJMxB+bnbRu7apillvcvlbmv/S5O0NcXIw4ysXwwAa+0csDOMfGg88eNkjLloA+OAGxYtlAtrQBrNXA6wmgVsjgoSAlAqKlgJ2wk7i0JCgCVScKdoUZsp3EvYnQgJAWYAvDsAFf0RSV8QEgJQ9JQiin4N2yjq44XkFNnHdCD/BhC04ueEA6iQlJLc0QIw6UU4YIWP11x1rG9h1CTkv1dF1zFH+G0m5ADxvbOD/gP6PgfSQLzmAXpv0x8hjriTIk5OhHjFRUBCTYLiUYACIoqrAAIkKq4GdBBqPbq6qb/pVRtaUWrr5DcZxS/7Q6Q5L8kAjWj0HKSKSPM/GR50GYuM4ywAAAAASUVORK5CYII=" />
+                        </div>
+                        <h5 class="mt-4 mb-2">Eastern Cape</h5>
+                        <P> 	
+
+                            082 301 8275
+
+
+                        </P>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4">
+                    <div class="service card-effect">
+                        <div class="iconbox">
+                            <i class='bx bx-music'></i>
+
+                            <img
+                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABH0lEQVRIS7WVARHCMAxFVwfDAThAAjjAAcwBUwAoYCgAB0gAB+AAJMxB+bnbRu7apillvcvlbmv/S5O0NcXIw4ysXwwAa+0csDOMfGg88eNkjLloA+OAGxYtlAtrQBrNXA6wmgVsjgoSAlAqKlgJ2wk7i0JCgCVScKdoUZsp3EvYnQgJAWYAvDsAFf0RSV8QEgJQ9JQiin4N2yjq44XkFNnHdCD/BhC04ueEA6iQlJLc0QIw6UU4YIWP11x1rG9h1CTkv1dF1zFH+G0m5ADxvbOD/gP6PgfSQLzmAXpv0x8hjriTIk5OhHjFRUBCTYLiUYACIoqrAAIkKq4GdBBqPbq6qb/pVRtaUWrr5DcZxS/7Q6Q5L8kAjWj0HKSKSPM/GR50GYuM4ywAAAAASUVORK5CYII=" />
+                        </div>
+                        <h5 class="mt-4 mb-2">Free State</h5>
+                        <P> 	
+
+                            071 412 2391
+
+
+                        </P>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4">
+                    <div class="service card-effect">
+                        <div class="iconbox">
+                            <i class='bx bx-music'></i>
+
+                            <img
+                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABH0lEQVRIS7WVARHCMAxFVwfDAThAAjjAAcwBUwAoYCgAB0gAB+AAJMxB+bnbRu7apillvcvlbmv/S5O0NcXIw4ysXwwAa+0csDOMfGg88eNkjLloA+OAGxYtlAtrQBrNXA6wmgVsjgoSAlAqKlgJ2wk7i0JCgCVScKdoUZsp3EvYnQgJAWYAvDsAFf0RSV8QEgJQ9JQiin4N2yjq44XkFNnHdCD/BhC04ueEA6iQlJLc0QIw6UU4YIWP11x1rG9h1CTkv1dF1zFH+G0m5ADxvbOD/gP6PgfSQLzmAXpv0x8hjriTIk5OhHjFRUBCTYLiUYACIoqrAAIkKq4GdBBqPbq6qb/pVRtaUWrr5DcZxS/7Q6Q5L8kAjWj0HKSKSPM/GR50GYuM4ywAAAAASUVORK5CYII=" />
+                        </div>
+                        <h5 class="mt-4 mb-2">Gauteng</h5>
+                        <P> 	
+
+                            082 442 2000
+
+
+                        </P>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4">
+                    <div class="service card-effect">
+                        <div class="iconbox">
+                            <i class='bx bx-music'></i>
+
+                            <img
+                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABH0lEQVRIS7WVARHCMAxFVwfDAThAAjjAAcwBUwAoYCgAB0gAB+AAJMxB+bnbRu7apillvcvlbmv/S5O0NcXIw4ysXwwAa+0csDOMfGg88eNkjLloA+OAGxYtlAtrQBrNXA6wmgVsjgoSAlAqKlgJ2wk7i0JCgCVScKdoUZsp3EvYnQgJAWYAvDsAFf0RSV8QEgJQ9JQiin4N2yjq44XkFNnHdCD/BhC04ueEA6iQlJLc0QIw6UU4YIWP11x1rG9h1CTkv1dF1zFH+G0m5ADxvbOD/gP6PgfSQLzmAXpv0x8hjriTIk5OhHjFRUBCTYLiUYACIoqrAAIkKq4GdBBqPbq6qb/pVRtaUWrr5DcZxS/7Q6Q5L8kAjWj0HKSKSPM/GR50GYuM4ywAAAAASUVORK5CYII=" />
+                        </div>
+                        <h5 class="mt-4 mb-2">KwaZulu-Natal</h5>
+                        <P> 	
+
+                            079 877 6536
+	
+
+
+                        </P>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4">
+                    <div class="service card-effect">
+                        <div class="iconbox">
+                            <i class='bx bx-music'></i>
+
+                            <img
+                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABH0lEQVRIS7WVARHCMAxFVwfDAThAAjjAAcwBUwAoYCgAB0gAB+AAJMxB+bnbRu7apillvcvlbmv/S5O0NcXIw4ysXwwAa+0csDOMfGg88eNkjLloA+OAGxYtlAtrQBrNXA6wmgVsjgoSAlAqKlgJ2wk7i0JCgCVScKdoUZsp3EvYnQgJAWYAvDsAFf0RSV8QEgJQ9JQiin4N2yjq44XkFNnHdCD/BhC04ueEA6iQlJLc0QIw6UU4YIWP11x1rG9h1CTkv1dF1zFH+G0m5ADxvbOD/gP6PgfSQLzmAXpv0x8hjriTIk5OhHjFRUBCTYLiUYACIoqrAAIkKq4GdBBqPbq6qb/pVRtaUWrr5DcZxS/7Q6Q5L8kAjWj0HKSKSPM/GR50GYuM4ywAAAAASUVORK5CYII=" />
+                        </div>
+                        <h5 class="mt-4 mb-2">Mpumalanga</h5>
+                        <P> 	
+
+                            082 565 6447
+
+
+                        </P>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4">
+                    <div class="service card-effect">
+                        <div class="iconbox">
+                            <i class='bx bx-music'></i>
+
+                            <img
+                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABH0lEQVRIS7WVARHCMAxFVwfDAThAAjjAAcwBUwAoYCgAB0gAB+AAJMxB+bnbRu7apillvcvlbmv/S5O0NcXIw4ysXwwAa+0csDOMfGg88eNkjLloA+OAGxYtlAtrQBrNXA6wmgVsjgoSAlAqKlgJ2wk7i0JCgCVScKdoUZsp3EvYnQgJAWYAvDsAFf0RSV8QEgJQ9JQiin4N2yjq44XkFNnHdCD/BhC04ueEA6iQlJLc0QIw6UU4YIWP11x1rG9h1CTkv1dF1zFH+G0m5ADxvbOD/gP6PgfSQLzmAXpv0x8hjriTIk5OhHjFRUBCTYLiUYACIoqrAAIkKq4GdBBqPbq6qb/pVRtaUWrr5DcZxS/7Q6Q5L8kAjWj0HKSKSPM/GR50GYuM4ywAAAAASUVORK5CYII=" />
+                        </div>
+                        <h5 class="mt-4 mb-2"> Northern Cape</h5>
+                        <P> 	
+
+                            063 686 5236
+
+
+                        </P>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4">
+                    <div class="service card-effect">
+                        <div class="iconbox">
+                            <i class='bx bx-music'></i>
+
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABt0lEQVRIS82VjVHCQBCFSQdagXSgdAAdSAdQgVKBUoHpwHQgHRgrECsQK5AO4vucvcxlcweRGWbcmZvkNrv73v7cpRidWYozxx+dBNA0zaeIbbU+tOqiKOoc0R6AnC9kfK91JcdlylE2jdNX2q9kv/f2HQAL/iyjWzOE3cw7yW4s3Y2tOz0hRfC5z8YDvETBQ9wkSPhopJ60XxjIRCC78N0DfBsbT7qU0yoKGnrwJn2JXkCBXIeQB8CR9FOyVDBqTbC4B1vpJ5bJu/lTqg22HuBVumkGYCOnuQFAgh5QGt5pcCmQR70/aK21570HgAMT5GUnxSyurQFBBlIhC4aDUrVkfAbBIQZg3kkZkI5YWejbXt8v/b6XgbHyfYB5nchqkCp10HyZ2noOiuiMcieZtGNhtilVK1YOGvoVRjVFIHkXyZlGk0kQ6k8ffkEsOM1lkpBsltnLTkFSI7tWsMrAw3USSCRP/CEA7peY5ZAW9ECOXtfKhMtvMSS62VTxLXwUwGrue3IIr3NvDQIwkLFlwuTkhCHg3LT/hcEAcUSVjZJd2xRN7VutJ5PW+emcBPCHfpz2T/5XAD/KV7YZNq/mYgAAAABJRU5ErkJggg=="/> </div>
+                        <h5 class="mt-4 mb-2"> North West</h5>
+                        <P> 	
+
+                            082 856 0995
+
+
+                        </P>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4">
+                    <div class="service card-effect">
+                        <div class="iconbox">
+                            <i class='bx bx-music'></i>
+
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABt0lEQVRIS82VjVHCQBCFSQdagXSgdAAdSAdQgVKBUoHpwHQgHRgrECsQK5AO4vucvcxlcweRGWbcmZvkNrv73v7cpRidWYozxx+dBNA0zaeIbbU+tOqiKOoc0R6AnC9kfK91JcdlylE2jdNX2q9kv/f2HQAL/iyjWzOE3cw7yW4s3Y2tOz0hRfC5z8YDvETBQ9wkSPhopJ60XxjIRCC78N0DfBsbT7qU0yoKGnrwJn2JXkCBXIeQB8CR9FOyVDBqTbC4B1vpJ5bJu/lTqg22HuBVumkGYCOnuQFAgh5QGt5pcCmQR70/aK21570HgAMT5GUnxSyurQFBBlIhC4aDUrVkfAbBIQZg3kkZkI5YWejbXt8v/b6XgbHyfYB5nchqkCp10HyZ2noOiuiMcieZtGNhtilVK1YOGvoVRjVFIHkXyZlGk0kQ6k8ffkEsOM1lkpBsltnLTkFSI7tWsMrAw3USSCRP/CEA7peY5ZAW9ECOXtfKhMtvMSS62VTxLXwUwGrue3IIr3NvDQIwkLFlwuTkhCHg3LT/hcEAcUSVjZJd2xRN7VutJ5PW+emcBPCHfpz2T/5XAD/KV7YZNq/mYgAAAABJRU5ErkJggg=="/>   </div>
+                        <h5 class="mt-4 mb-2"> Western Cape</h5>
+                        <P> 	
+
+                            082 469 7721
+
+
+                        </P>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+    </section>
+    <footer>
+        <div class="footer-top">
+
+
+
+            <div class="container">
+                <div class="row gy-4">
+                    <div class="col-md-4">
+                        <img src="logo.png" alt="" class="logo" height="150px">
+                    </div>
+
+                    
+                    <div class="col-md-2">
+                        <h5 class="text-white">More</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">FAQ's</a></li>
+                            <li><a href="#">Privacy & Policy</a></li>
+                            <li><a href="#">Conditions</a></li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom py-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        @ 2023 copyright all right reserved
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+
+   
+    
+    
+
+    
+</body>
+</html>
